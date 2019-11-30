@@ -83,7 +83,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>br.com.ConfigAPI.PagamentoApplication</mainClass>
+					<mainClass>com.pagamento.api.PagamentoApplication</mainClass>
 				</configuration>
 				<executions>
 					<execution>
