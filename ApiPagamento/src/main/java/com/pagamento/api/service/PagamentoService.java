@@ -26,16 +26,16 @@ public class PagamentoService {
 				.collect((Collectors.toList()));
 	}
 
-	public Pagamento realizarPagamento(Long clienteId, DadosPagamento dadosPag) {
+	public Pagamento realizarPagamento(DadosPagamento dadosPag) {
 
 		Pagamento pag = new Pagamento();
 
-		pag.setClienteId(clienteId);
-		pag.setNumeroCartao(dadosPag.getNumero());
-		pag.setCodigo(dadosPag.getCodigo());
+		pag.setClienteId(dadosPag.getIdCliente());
+		pag.setNumeroCartao(dadosPag.getNumeroCartao());
+		pag.setCodigo(dadosPag.getCodigoCartao());
 		pag.setNomeImpressoCartao(dadosPag.getNomeImpressoCartao());
 		pag.setValorTotal(dadosPag.getValorTotal());
-		pag.setDataValidade(dadosPag.getDataValidade());
+		pag.setDataValidade(dadosPag.getDataValidadeCartao());
 
 		return pagamentoRepository.save(pag);
 	}

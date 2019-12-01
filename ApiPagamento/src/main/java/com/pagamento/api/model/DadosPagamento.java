@@ -9,18 +9,13 @@ public class DadosPagamento {
 	private String codigoCartao;
 	private String dataValidadeCartao;
 	private BigDecimal valorTotal;
+	private Long idCliente;
 	
-	public BigDecimal getValorTotal() {
-		return valorTotal;
-	}
-	public void setValorTotal(BigDecimal valorTotal) {
-		this.valorTotal = valorTotal;
-	}
-	public String getNumero() {
+	public String getNumeroCartao() {
 		return numeroCartao;
 	}
-	public void setNumero(String numero) {
-		this.numeroCartao = numero;
+	public void setNumeroCartao(String numeroCartao) {
+		this.numeroCartao = numeroCartao;
 	}
 	public String getNomeImpressoCartao() {
 		return nomeImpressoCartao;
@@ -28,18 +23,29 @@ public class DadosPagamento {
 	public void setNomeImpressoCartao(String nomeImpressoCartao) {
 		this.nomeImpressoCartao = nomeImpressoCartao;
 	}
-	public String getCodigo() {
+	public String getCodigoCartao() {
 		return codigoCartao;
 	}
-	public void setCodigo(String codigo) {
-		this.codigoCartao = codigo;
+	public void setCodigoCartao(String codigoCartao) {
+		this.codigoCartao = codigoCartao;
 	}
-	public String getDataValidade() {
+	public String getDataValidadeCartao() {
 		return dataValidadeCartao;
 	}
-	public void setDataValidade(String dataValidade) {
-		this.dataValidadeCartao = dataValidade;
+	public void setDataValidadeCartao(String dataValidadeCartao) {
+		this.dataValidadeCartao = dataValidadeCartao;
 	}
-	
+	public BigDecimal getValorTotal() {
+		return valorTotal;
+	}
+	public void setValorTotal(BigDecimal valorTotal) {
+		this.valorTotal = valorTotal;
+	}
+	public Long getIdCliente() {
+		return idCliente;
+	}
+	public void setIdCliente(Long idCliente) {
+		this.idCliente = idCliente;
+	}
 	
 }

@@ -34,11 +34,10 @@ public class PagamentoResource {
 	}
 
 	@ApiOperation(value = "Realizar pagamento para um cliente")
-	@PostMapping("/api/pagamento/cliente/{idCliente}")
-	public ResponseEntity<Pagamento> realizarPagamento(@PathVariable("idCliente") Long idCliente,
-			@RequestBody DadosPagamento dadosCartao) {
+	@PostMapping("/api/pagamento/pagar")
+	public ResponseEntity<Pagamento> realizarPagamento(@RequestBody DadosPagamento dadosPagamento) {
 
-		Pagamento pag = pagamentoService.realizarPagamento(idCliente, dadosCartao);
+		Pagamento pag = pagamentoService.realizarPagamento(dadosPagamento);
 		return ResponseEntity.ok(pag);
 	}
 }
